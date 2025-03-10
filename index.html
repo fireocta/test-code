@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Spoiler Checker</title>
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        .result {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Movie Spoiler Checker</h1>
+    <input type="text" id="review" placeholder="Enter a movie review..." />
+    <button onclick="checkSpoiler()">Check Spoiler</button>
+    <p id="result" class="result"></p>
+
+    <script>
+        async function checkSpoiler() {
+            const review = document.getElementById("review").value;
+            if (!review.trim()) {
+                alert("Please enter a review!");
+                return;
+            }
+
+            document.getElementById("result").textContent = "Checking...";
+            
+            try {
+                const response = await fetch("http://localhost:8000/check_spoiler/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ text: review }),
+                });
+
+                const data = await response.json();
+                document.getElementById("result").textContent = data.message;
+                document.getElementById("result").style.color = data.message.includes("not") ? "green" : "red";
+            } catch (error) {
+                document.getElementById("result").textContent = "Error checking spoiler";
+            }
+        }
+    </script>
+
+</body>
+</html>
