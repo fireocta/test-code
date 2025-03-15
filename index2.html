@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Spoiler Checker</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        input {
+            padding: 12px;
+            margin: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            width: 80%;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            padding: 12px 20px;
+            margin: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            background: linear-gradient(135deg, #ff6b6b, #f94d6f);
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+        .result {
+            font-size: 22px;
+            margin-top: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Movie Spoiler Checker</h1>
+    <input type="text" id="review" placeholder="Enter a movie review..." />
+    <button onclick="checkSpoiler()">Check Spoiler</button>
+    <p id="result" class="result">Hover over me to see the magic!</p>
+
+    <footer>Crafted with ❤️ by Movie Enthusiasts</footer>
+
+    <script>
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        // Hover effect for the result element
+        document.getElementById("result").onmouseover = event => {
+            let iteration = 0;
+
+            clearInterval(interval);
+
+            interval = setInterval(() => {
+                event.target.innerText = event.target.innerText
+                    .split("")
+                    .map((letter, index) => {
+                        if (index < iteration) {
+                            return event.target.dataset.value[index];
+                        }
+                        return letters[Math.floor(Math.random() * 26)];
+                    })
+                    .join("");
+
+                if (iteration >= event.target.dataset.value.length) { 
+                    clearInterval(interval);
+                }
+                iteration += 1 / 3;
+            }, 30);
+        };
+
+        function checkSpoiler() {
+            const review = document.getElementById("review").value;
+            if (!review.trim()) {
+                alert("Please enter a review!");
+                return;
+            }
+
+            document.getElementById("result").textContent = "Checking...";
+            document.getElementById("result").dataset.value = "Processing...";
+
+            // Randomly decide if it's a spoiler or not
+            setTimeout(() => {
+                const isSpoiler = Math.random() < 0.5; // 50% chance for spoiler
+                if (isSpoiler) {
+                    document.getElementById("result").textContent = "This review contains SPOILERS!";
+                    document.getElementById("result").dataset.value = "This review contains SPOILERS!";
+                    document.getElementById("result").style.color = "red";
+                } else {
+                    document.getElementById("result").textContent = "This review does NOT contain spoilers!";
+                    document.getElementById("result").dataset.value = "This review does NOT contain spoilers!";
+                    document.getElementById("result").style.color = "lime";
+                }
+            }, 1000); // Simulate a short delay
+        }
+    </script>
+
+</body>
+</html>
