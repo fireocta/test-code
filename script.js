@@ -1,31 +1,31 @@
-async function checkSpoiler() {
-    const review = document.getElementById("review").value;
-    if (!review.trim()) {
-        alert("Please enter a review!");
-        return;
-    }
+    async function checkSpoiler() {
+        const review = document.getElementById("review").value;
+        if (!review.trim()) {
+            alert("Please enter a review!");
+            return;
+        }
 
-    result.innerText = "Checking...";
-    applyRandomization();
-    
-    try {
-        const response = await fetch("http://localhost:8000/check_spoiler/", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ text: review }),
-        });
-
-        const data = await response.json();
-        document.getElementById("result").textContent = data.message;
-        document.getElementById("result").style.color = data.message.includes("not") ? "green" : "red";
+        result.innerText = "Checking...";
         applyRandomization();
+        
+        try {
+            const response = await fetch("http://localhost:8000/check_spoiler/", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ text: review }),
+            });
 
-    } catch (error) {
-        document.getElementById("result").textContent = "Error checking spoiler";
-        document.getElementById("result").style.color = "red";
-        applyRandomization();
+            const data = await response.json();
+            document.getElementById("result").textContent = data.message;
+            document.getElementById("result").style.color = data.message.includes("not") ? "lime" : "red";
+            applyRandomization();
+
+        } catch (error) {
+            document.getElementById("result").textContent = "Error checking spoiler";
+            document.getElementById("result").style.color = "red";
+            applyRandomization();
+        }
     }
-}
 
 async function searchMovie() {
     const title = document.getElementById("movieTitle").value;
@@ -87,3 +87,6 @@ function applyRandomization() {
     }, 30); // Speed of animation
 }
 
+setInterval(() => {
+    
+}, 5000); // Randomize every 5 seconds
