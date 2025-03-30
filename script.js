@@ -17,7 +17,7 @@
 
             const data = await response.json();
             document.getElementById("result").textContent = data.message;
-            document.getElementById("result").style.color = data.message.includes("not") ? "lime" : "red";
+            document.getElementById("result").style.color = data.message.includes("Non-") ? "lime" : "red";
             applyRandomization();
 
         } catch (error) {
