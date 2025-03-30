@@ -39,53 +39,7 @@
     <button onclick="searchMovie()">Search Movie</button>
     <div id="movieResult" class="movie-result"></div>
 
-    <script>
-        async function checkSpoiler() {
-            const review = document.getElementById("review").value;
-            if (!review.trim()) {
-                alert("Please enter a review!");
-                return;
-            }
-
-            document.getElementById("result").textContent = "Checking...";
-            
-            try {
-                const response = await fetch("http://localhost:8000/check_spoiler/", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ text: review }),
-                });
-
-                const data = await response.json();
-                document.getElementById("result").textContent = data.message;
-                document.getElementById("result").style.color = data.message.includes("not") ? "green" : "red";
-            } catch (error) {
-                document.getElementById("result").textContent = "Error checking spoiler";
-            }
-        }
-
-        async function searchMovie() {
-            const title = document.getElementById("movieTitle").value;
-            if (!title.trim()) {
-                alert("Please enter a movie title!");
-                return;
-            }
-
-            document.getElementById("movieResult").textContent = "Searching...";
-
-            try {
-                const response = await fetch(`http://localhost:8000/search_movie/?title=${title}`);
-                if (response.ok) {
-                    const data = await response.json();
-                    document.getElementById("movieResult").textContent = JSON.stringify(data, null, 2);
-                } else {
-                    document.getElementById("movieResult").textContent = "Movie not found";
-                }
-            } catch (error) {
-                document.getElementById("movieResult").textContent = "Error searching movie";
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
