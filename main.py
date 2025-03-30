@@ -24,7 +24,7 @@ async def check_spoiler(review: ReviewRequest):
 class MovieSearchRequest(BaseModel):
     title: str
 
-@app.get("/search_movie/")
+@app.post("/search_movie/")
 async def search_movie_endpoint(request: MovieSearchRequest):
     result = search_movie(request.title)
     if result:
