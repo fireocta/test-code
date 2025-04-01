@@ -1,0 +1,126 @@
+{
+    "Marco": {
+        "Title": "Marco",
+        "Year": "2024",
+        "Rated": "N/A",
+        "Released": "20 Dec 2024",
+        "Runtime": "145 min",
+        "Genre": "Action",
+        "Director": "Haneef Adeni",
+        "Writer": "Haneef Adeni",
+        "Actors": "Unni Mukundan, Siddique, Jagadish",
+        "Plot": "Gangster Marco and the powerful Adat family, who dominate Kerala's gold mafia.",
+        "Language": "Malayalam, Telugu",
+        "Country": "India",
+        "Awards": "N/A",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMDNkZmZlOWEtMjIxYS00MzMwLTg4ODYtMDRmNzY2NjY3NDdkXkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+            {
+                "Source": "Internet Movie Database",
+                "Value": "7.2/10"
+            }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "7.2",
+        "imdbVotes": "17,331",
+        "imdbID": "tt29383379",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+    },
+    "Empuraan": {
+        "Title": "L2: Empuraan",
+        "Year": "2025",
+        "Rated": "N/A",
+        "Released": "27 Mar 2025",
+        "Runtime": "N/A",
+        "Genre": "Action, Crime, Thriller",
+        "Director": "Prithviraj Sukumaran",
+        "Writer": "Murali Gopy",
+        "Actors": "Mohanlal, Manju Warrier, Tovino Thomas",
+        "Plot": "The journey of Stephen Nedumpilly and how he became Khureshi Ab'Ram, the leader of an international crime organization.",
+        "Language": "Malayalam, Tamil, Telugu, Kannada, Hindi",
+        "Country": "India",
+        "Awards": "N/A",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BZjEyMWQyYjItZGZjZC00NGNhLWFiNzUtYzI2YWNmNzUwNWQ5XkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [],
+        "Metascore": "N/A",
+        "imdbRating": "N/A",
+        "imdbVotes": "N/A",
+        "imdbID": "tt10505918",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+    },
+    "Lucifer": {
+        "Title": "Lucifer",
+        "Year": "2016\u20132021",
+        "Rated": "TV-14",
+        "Released": "25 Jan 2016",
+        "Runtime": "42 min",
+        "Genre": "Crime, Drama, Fantasy",
+        "Director": "N/A",
+        "Writer": "Tom Kapinos",
+        "Actors": "Tom Ellis, Lauren German, Kevin Alejandro",
+        "Plot": "Lucifer Morningstar has decided he's had enough of being the dutiful servant in Hell and decides to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City of Angels.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "Nominated for 1 Primetime Emmy. 2 wins & 20 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BYzMwNzI3MWItZTIzYi00YjkxLThhOWQtYmUwYjg4NWM0ZWI1XkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+            {
+                "Source": "Internet Movie Database",
+                "Value": "8.0/10"
+            }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "8.0",
+        "imdbVotes": "368,551",
+        "imdbID": "tt4052886",
+        "Type": "series",
+        "totalSeasons": "6",
+        "Response": "True"
+    },
+    "Mayamohini": {
+        "Title": "Mayamohini",
+        "Year": "2012",
+        "Rated": "N/A",
+        "Released": "12 Apr 2012",
+        "Runtime": "150 min",
+        "Genre": "Comedy, Drama",
+        "Director": "Jose Thomas",
+        "Writer": "Siby K. Thomas, Udaykrishnan",
+        "Actors": "Dileep, Biju Menon, Ponnamma Babu",
+        "Plot": "Balakrishnan is cheated by his girlfriend, in order to make the family happy, he hires a girl, Mayamohini and pretends to be in love. Things take a turn when they realize that Mayamohini is a man.",
+        "Language": "Malayalam",
+        "Country": "India",
+        "Awards": "1 win",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNTU0ZjQ0NzctMjA4My00NzY3LTgyYWQtMmY0MGU0OTNlMzYyXkEyXkFqcGdeQXVyMjkxNzQ1NDI@._V1_SX300.jpg",
+        "Ratings": [
+            {
+                "Source": "Internet Movie Database",
+                "Value": "3.7/10"
+            }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "3.7",
+        "imdbVotes": "669",
+        "imdbID": "tt2359175",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "Malayalam Movie USA",
+        "Website": "N/A",
+        "Response": "True"
+    },
+    "Lucifer Malayalam movie": {
+        "Response": "False",
+        "Error": "Movie not found!"
+    }
+}
