@@ -168,17 +168,45 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
         }
-    </style>
+
+        .suggestions {
+            position: relative;
+            margin: 0 auto;
+            max-width: 300px;
+            background: rgba(40, 40, 40, 0.95);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .suggestion-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .suggestion-item:hover {
+            background: rgba(76, 175, 80, 0.2);
+        }
+
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+
+        .result {
+            font-size: 45px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        </style>
 </head>
 <body>
-
+    
+    
     <h1>Movie Spoiler Checker</h1>
-    <input type="text" id="review" placeholder="Enter a movie review..." />
-    <button onclick="checkSpoiler()">Check Spoiler</button>
-    <p id="result" class="result"></p>
-
     <input type="text" id="movieTitle" placeholder="Enter movie title">
     <button onclick="displayMovieInfo()">Search Movie</button>
+    <div id="suggestions" class="suggestions"></div>
     <p id="moviecheck" class="moviecheck"></p>
     <div id="movieInfo" class="movie-result hidden">
         <h2>Movie Information</h2>
@@ -195,11 +223,18 @@
             </div>
         </div>
     </div>
+    
+    <input type="text" id="review" placeholder="Enter a movie review..." />
+    <button onclick="checkSpoiler()">Check Spoiler</button>
+    <p id="result" class="result"></p>
+
+
+    <div class="hidden">
     <h2>Search for a Movie</h2>
     <input type="text" id="movieTitle" placeholder="Enter a movie title..." />
     <button onclick="searchMovie()">Search Movie</button>
     <div id="movieResult" class="movie-result"></div>
-
+</div>
     <script src="script.js"></script>
     <script src="script1.js"></script>
 

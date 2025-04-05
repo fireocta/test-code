@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from spoiler_main import is_spoiler, search_movie
+from spoiler_main import is_spoiler, search_movie, get_movie_suggestions
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -32,3 +32,10 @@ async def search_movie_endpoint(request: MovieSearchRequest):
     else:
         raise HTTPException(status_code=404, detail="Movie not found")
 
+class SearchSuggestionRequest(BaseModel):
+    search_term: str
+
+@app.post("/search_suggestions/")
+async def search_suggestions(request: SearchSuggestionRequest):
+    suggestions = await get_movie_suggestions(request.search_term)
+    return suggestions

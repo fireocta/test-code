@@ -1,4 +1,4 @@
-    async function checkSpoiler() {
+async function checkSpoiler() {
         const review = document.getElementById("review").value;
         if (!review.trim()) {
             alert("Please enter a review!");
@@ -9,7 +9,7 @@
         applyRandomization();
         
         try {
-            const response = await fetch("http://localhost:8000/check_spoiler/", {
+            const response = await fetch("http://127.0.0.1:8000/check_spoiler/", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ text: review }),
@@ -17,7 +17,7 @@
 
             const data = await response.json();
             document.getElementById("result").textContent = data.message;
-            document.getElementById("result").style.color = data.message.includes("Non-") ? "lime" : "red";
+            document.getElementById("result").style.color = data.message.includes("NON-") ? "lime" : "red";
             applyRandomization();
 
         } catch (error) {
@@ -37,7 +37,7 @@ async function searchMovie() {
     document.getElementById("movieResult").textContent = "Searching...";
 
     try {
-        const response = await fetch("http://localhost:8000/search_movie/", {
+        const response = await fetch("http://127.0.0.1:8000/search_movie/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ title: title }),
@@ -133,3 +133,61 @@ async function displayMovieInfo() {
         movieInfo.classList.add("hidden");
     }
 }
+
+let debounceTimer;
+
+// Remove the input event listener and replace with button click handler
+document.querySelector('button[onclick="searchMovie()"]').addEventListener('click', function() {
+    const searchTerm = document.getElementById("movieTitle").value;
+    
+    if (searchTerm.length < 2) {
+        alert("Please enter at least 2 characters");
+        return;
+    }
+
+    fetchSuggestions(searchTerm);
+});
+
+async function fetchSuggestions(searchTerm) {
+    try {
+        const response = await fetch("http://127.0.0.1:8000/search_suggestions/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ search_term: searchTerm }),
+        });
+
+        if (!response.ok) throw new Error("Failed to fetch suggestions");
+        
+        const suggestions = await response.json();
+        displaySuggestions(suggestions);
+    } catch (error) {
+        console.error("Error fetching suggestions:", error);
+    }
+}
+
+function displaySuggestions(suggestions) {
+    const suggestionsContainer = document.getElementById("suggestions");
+    suggestionsContainer.innerHTML = "";
+
+    suggestions.forEach(movie => {
+        const div = document.createElement("div");
+        div.className = "suggestion-item";
+        div.textContent = `${movie.Title} (${movie.Year})`;
+        div.onclick = () => {
+            document.getElementById("movieTitle").value = movie.Title;
+            suggestionsContainer.innerHTML = "";
+            displayMovieInfo();
+        };
+        suggestionsContainer.appendChild(div);
+    });
+}
+
+// Add click event listener to close suggestions when clicking outside
+document.addEventListener("click", function(e) {
+    const suggestionsContainer = document.getElementById("suggestions");
+    const searchInput = document.getElementById("movieTitle");
+    
+    if (e.target !== searchInput && !suggestionsContainer.contains(e.target)) {
+        suggestionsContainer.innerHTML = "";
+    }
+});

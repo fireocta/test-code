@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def is_spoiler(review):
-    prompt = f"Classify the following movie review as 'Spoiler' or 'Non-Spoiler':\n\n{review}\n\nAnswer:"
+    prompt = f"Classify the following movie review as 'SPOILER' or 'NON-SPOILER':\n\n{review}\n\nAnswer:"
 
     try:
         response = openai.chat.completions.create(
@@ -84,3 +84,19 @@ def add_to_local_db(title: str, data: dict):
 
     with open("movie_db.json", "w") as local_db:
         json.dump(local_db_data, local_db, indent=4)
+
+async def get_movie_suggestions(search_term: str):
+    api_key = os.getenv("OMDB_API_KEY")
+    url = f"http://www.omdbapi.com/?s={search_term}&apikey={api_key}"
+    
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            data = response.json()
+            if data.get("Response") == "True":
+                # Return only the first 5 suggestions
+                return data.get("Search", [])[:5]
+    except Exception as e:
+        print(f"Error fetching suggestions: {e}")
+    
+    return []

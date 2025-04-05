@@ -58,35 +58,6 @@
         "Website": "N/A",
         "Response": "True"
     },
-    "Lucifer": {
-        "Title": "Lucifer",
-        "Year": "2016\u20132021",
-        "Rated": "TV-14",
-        "Released": "25 Jan 2016",
-        "Runtime": "42 min",
-        "Genre": "Crime, Drama, Fantasy",
-        "Director": "N/A",
-        "Writer": "Tom Kapinos",
-        "Actors": "Tom Ellis, Lauren German, Kevin Alejandro",
-        "Plot": "Lucifer Morningstar has decided he's had enough of being the dutiful servant in Hell and decides to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City of Angels.",
-        "Language": "English",
-        "Country": "United States",
-        "Awards": "Nominated for 1 Primetime Emmy. 2 wins & 20 nominations total",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BYzMwNzI3MWItZTIzYi00YjkxLThhOWQtYmUwYjg4NWM0ZWI1XkEyXkFqcGc@._V1_SX300.jpg",
-        "Ratings": [
-            {
-                "Source": "Internet Movie Database",
-                "Value": "8.0/10"
-            }
-        ],
-        "Metascore": "N/A",
-        "imdbRating": "8.0",
-        "imdbVotes": "368,551",
-        "imdbID": "tt4052886",
-        "Type": "series",
-        "totalSeasons": "6",
-        "Response": "True"
-    },
     "Mayamohini": {
         "Title": "Mayamohini",
         "Year": "2012",
@@ -119,8 +90,196 @@
         "Website": "N/A",
         "Response": "True"
     },
-    "Lucifer Malayalam movie": {
-        "Response": "False",
-        "Error": "Movie not found!"
+    "Lucifer": {
+        "Title": "Lucifer",
+        "Year": "2016\u20132021",
+        "Rated": "TV-14",
+        "Released": "25 Jan 2016",
+        "Runtime": "42 min",
+        "Genre": "Crime, Drama, Fantasy",
+        "Director": "N/A",
+        "Writer": "Tom Kapinos",
+        "Actors": "Tom Ellis, Lauren German, Kevin Alejandro",
+        "Plot": "Lucifer Morningstar has decided he's had enough of being the dutiful servant in Hell and decides to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City of Angels.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "Nominated for 1 Primetime Emmy. 2 wins & 20 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BYzMwNzI3MWItZTIzYi00YjkxLThhOWQtYmUwYjg4NWM0ZWI1XkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+            {
+                "Source": "Internet Movie Database",
+                "Value": "8.0/10"
+            }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "8.0",
+        "imdbVotes": "368,551",
+        "imdbID": "tt4052886",
+        "Type": "series",
+        "totalSeasons": "6",
+        "Response": "True"
+    },
+    "lucifer": {
+        "Title": "Lucifer",
+        "Year": "2016\u20132021",
+        "Rated": "TV-14",
+        "Released": "25 Jan 2016",
+        "Runtime": "42 min",
+        "Genre": "Crime, Drama, Fantasy",
+        "Director": "N/A",
+        "Writer": "Tom Kapinos",
+        "Actors": "Tom Ellis, Lauren German, Kevin Alejandro",
+        "Plot": "Lucifer Morningstar has decided he's had enough of being the dutiful servant in Hell and decides to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City of Angels.",
+        "Language": "English",
+        "Country": "United States",
+        "Awards": "Nominated for 1 Primetime Emmy. 2 wins & 20 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BYzMwNzI3MWItZTIzYi00YjkxLThhOWQtYmUwYjg4NWM0ZWI1XkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+            {
+                "Source": "Internet Movie Database",
+                "Value": "8.0/10"
+            }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "8.0",
+        "imdbVotes": "368,551",
+        "imdbID": "tt4052886",
+        "Type": "series",
+        "totalSeasons": "6",
+        "Response": "True"
+    },
+    "breaking bad": {
+        "Title": "Breaking Bad",
+        "Year": "2008\u20132013",
+        "Rated": "TV-MA",
+        "Released": "20 Jan 2008",
+        "Runtime": "49 min",
+        "Genre": "Crime, Drama, Thriller",
+        "Director": "N/A",
+        "Writer": "Vince Gilligan",
+        "Actors": "Bryan Cranston, Aaron Paul, Anna Gunn",
+        "Plot": "A chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine with a former student to secure his family's future.",
+        "Language": "English, Spanish",
+        "Country": "United States",
+        "Awards": "Won 16 Primetime Emmys. 169 wins & 269 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+            {
+                "Source": "Internet Movie Database",
+                "Value": "9.5/10"
+            },
+            {
+                "Source": "Rotten Tomatoes",
+                "Value": "96%"
+            }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "9.5",
+        "imdbVotes": "2,283,453",
+        "imdbID": "tt0903747",
+        "Type": "series",
+        "totalSeasons": "5",
+        "Response": "True"
+    },
+    "marco": {
+        "Title": "Marco",
+        "Year": "2024",
+        "Rated": "N/A",
+        "Released": "20 Dec 2024",
+        "Runtime": "145 min",
+        "Genre": "Action",
+        "Director": "Haneef Adeni",
+        "Writer": "Haneef Adeni",
+        "Actors": "Unni Mukundan, Siddique, Jagadish",
+        "Plot": "Gangster Marco and the powerful Adat family, who dominate Kerala's gold mafia.",
+        "Language": "Malayalam, Telugu",
+        "Country": "India",
+        "Awards": "N/A",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMDNkZmZlOWEtMjIxYS00MzMwLTg4ODYtMDRmNzY2NjY3NDdkXkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+            {
+                "Source": "Internet Movie Database",
+                "Value": "7.2/10"
+            }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "7.2",
+        "imdbVotes": "17,331",
+        "imdbID": "tt29383379",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
+    },
+    "the glory": {
+        "Title": "The Glory",
+        "Year": "2022\u20132023",
+        "Rated": "TV-MA",
+        "Released": "30 Dec 2022",
+        "Runtime": "N/A",
+        "Genre": "Drama, Mystery, Thriller",
+        "Director": "N/A",
+        "Writer": "N/A",
+        "Actors": "Song Hye-kyo, Lee Do-hyun, Lim Ji-yeon",
+        "Plot": "A woman lives for absolute revenge against her childhood bullies who destroyed her life.",
+        "Language": "Korean",
+        "Country": "South Korea",
+        "Awards": "6 wins & 5 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BODM0ZTc5YTAtZmMxNi00YzJkLWEzODItZDczZTRlNTc1NGE3XkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+            {
+                "Source": "Internet Movie Database",
+                "Value": "8.1/10"
+            }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "8.1",
+        "imdbVotes": "34,826",
+        "imdbID": "tt21344706",
+        "Type": "series",
+        "totalSeasons": "1",
+        "Response": "True"
+    },
+    "cinderella": {
+        "Title": "Cinderella",
+        "Year": "2015",
+        "Rated": "PG",
+        "Released": "13 Mar 2015",
+        "Runtime": "105 min",
+        "Genre": "Adventure, Drama, Family",
+        "Director": "Kenneth Branagh",
+        "Writer": "Chris Weitz, Charles Perrault",
+        "Actors": "Lily James, Cate Blanchett, Richard Madden",
+        "Plot": "When her father unexpectedly dies, young Ella finds herself at the mercy of her cruel stepmother and her scheming stepsisters. Never one to give up hope, Ella's fortunes begin to change after meeting a dashing stranger.",
+        "Language": "English",
+        "Country": "United Kingdom, United States, Denmark, Canada, Italy",
+        "Awards": "Nominated for 1 Oscar. 10 wins & 38 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMjMxODYyODEzN15BMl5BanBnXkFtZTgwMDk4OTU0MzE@._V1_SX300.jpg",
+        "Ratings": [
+            {
+                "Source": "Internet Movie Database",
+                "Value": "6.9/10"
+            },
+            {
+                "Source": "Rotten Tomatoes",
+                "Value": "84%"
+            },
+            {
+                "Source": "Metacritic",
+                "Value": "67/100"
+            }
+        ],
+        "Metascore": "67",
+        "imdbRating": "6.9",
+        "imdbVotes": "195,462",
+        "imdbID": "tt1661199",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "$201,151,353",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
     }
 }
