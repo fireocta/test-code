@@ -9,5 +9,5 @@
  ```bash
  uvicorn main:app --reload
  ```
-  Open the website using the live preview in vscode or opening the html file.
+  Open the website using the live preview in vscode or opening the index.html file. 
 
