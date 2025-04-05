@@ -6,4 +6,5 @@
  ```
   Open the website using the live preview or opening the html file.
 
- 
+install the requirements.txt
+using pip install -r r.txt
