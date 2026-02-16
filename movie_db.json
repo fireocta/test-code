@@ -281,5 +281,37 @@
         "Production": "N/A",
         "Website": "N/A",
         "Response": "True"
+    },
+    "empuraan": {
+        "Title": "L2: Empuraan",
+        "Year": "2025",
+        "Rated": "N/A",
+        "Released": "27 Mar 2025",
+        "Runtime": "179 min",
+        "Genre": "Action, Crime, Thriller",
+        "Director": "Prithviraj Sukumaran",
+        "Writer": "Murali Gopy",
+        "Actors": "Mohanlal, Prithviraj Sukumaran, Rick Yune",
+        "Plot": "The journey of Stephen Nedumpally, a man leading a double life as Khureshi Ab'raam, an enigmatic leader of a powerful global crime syndicate.",
+        "Language": "Malayalam, Tamil, Telugu, Kannada",
+        "Country": "India",
+        "Awards": "1 nomination total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BZTMwN2E5ZWYtMWRlYy00MmYzLTk2MDMtZWE1ZWJiY2NhNWY4XkEyXkFqcGc@._V1_SX300.jpg",
+        "Ratings": [
+            {
+                "Source": "Internet Movie Database",
+                "Value": "6.2/10"
+            }
+        ],
+        "Metascore": "N/A",
+        "imdbRating": "6.2",
+        "imdbVotes": "13,218",
+        "imdbID": "tt10505918",
+        "Type": "movie",
+        "DVD": "N/A",
+        "BoxOffice": "N/A",
+        "Production": "N/A",
+        "Website": "N/A",
+        "Response": "True"
     }
 }

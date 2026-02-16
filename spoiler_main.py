@@ -4,27 +4,46 @@ import requests
 import openai
 import time
 import os
+from google import genai
 from dotenv import load_dotenv
 load_dotenv()
 
-def is_spoiler(review):
-    prompt = f"Classify the following movie review as 'SPOILER' or 'NON-SPOILER':\n\n{review}\n\nAnswer:"
 
+
+# 1. SETUP: Replace with your actual key
+client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+
+def is_spoiler(review):
     try:
-        response = openai.chat.completions.create(
-            model="gpt-4o-mini",  # Use "gpt-4-turbo" or "gpt-3.5-turbo"
-            messages=[
-                {"role": "system", "content": "You are a movie review classifier that detects spoilers."},
-                {"role": "user", "content": prompt}
-            ],
-            temperature=0  # Low temperature for consistent responses
+        response = client.models.generate_content(
+            model="gemini-2.0-flash",
+            config={
+                "system_instruction": "You are a movie review classifier. Detect spoilers.",
+                "temperature": 0,
+                "response_mime_type": "application/json",
+            },
+            contents=f"Classify this review. Return a JSON object with the key 'classification' and value 'SPOILER' or 'NON-SPOILER'. Review: {review}"
         )
 
-        result = response.choices[0].message.content.strip()
-        return result
+        data = json.loads(response.text)
+        return data.get("classification", "Error")
+        
     except Exception as e:
-        #print(f"Error: {e}")
-        return "Error"
+        return f"Error: {e}"
+
+# 2. TESTING: Let's try two different examples
+test_reviews = [
+    "I loved the cinematography and the acting was top notch! Highly recommend.",
+    "I can't believe the main character dies at the 20-minute mark, what a twist!"
+]
+
+print("--- Gemini Spoiler Test Results ---")
+for i, review in enumerate(test_reviews, 1):
+    result = is_spoiler(review)
+    print(f"Review {i}: {review}")
+    print(f"Result:  [{result}]\n")
+
+
 
 def search_omdb(title: str):
     print("Searching OMDB...")
